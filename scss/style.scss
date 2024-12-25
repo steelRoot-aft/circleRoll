@@ -1,0 +1,1137 @@
+
+@import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+body {
+	font-family: "Pacifico", serif;
+}
+
+.wrapper {
+	display: grid;
+	grid-template: repeat(3, auto) / 1fr;
+	overflow: hidden;
+	position: relative;
+}
+
+.container {
+	display: grid;
+	grid-template: 1fr / 1fr minmax(auto, 1170px) 1fr;
+	padding: 0 15px;
+}
+
+.soup {
+	background: #FAF3E0;
+	padding: 100px 0 0 0;
+	position: relative; 
+	&::before {
+		content: '';
+		width: 100%;
+		height: 2px;
+		background: #d7bfa86e;
+		position: absolute;
+		bottom: 45px;
+		left: 0;
+	}
+	.element-1 {
+		&::before {
+			content: '';
+			width: 100px;
+			height: 100px;
+			background: url(../img/arbuz.svg) 0 0/contain no-repeat;
+			position: absolute;
+			top: 130px;
+			right: 20px;
+			transform: rotate(215deg);
+			animation: arbuz-soup 5s linear infinite;
+		}
+		&::after {
+			content: '';
+			width: 60px;
+			height: 60px;
+			background: url(../img/bread.svg) 0 0/contain no-repeat;
+			position: absolute;
+			top: 100px;
+			left: 20px;
+			animation: bread-soup 5s linear infinite;
+		}
+	}
+	&__body {
+		grid-column: 2 / 3;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 100px 0;
+		position: relative;
+	}
+	&__info {
+		position: absolute;
+		top: -15px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		z-index: 3;
+	}
+	&__info-title {
+		font-size: 3rem;
+		font-weight: 300;
+		color: #5C4B3A;
+	}
+	&__button {
+		position: absolute;
+		z-index: 100;
+		top: 50%;
+		transform: translate(0, -50%);
+		display: flex;
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		font-size: 1.5rem;
+		background: #D7BFA8;
+		color: #5C4B3A;
+		box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+	}
+
+	&__arrow {
+		
+		
+		&::before {
+			content: '';
+			width: 70px;
+			height: 80px;
+			background: url(../img/pointer-pin-svgrepo-com.svg) 0 0/ contain no-repeat;
+			position: absolute;
+			left: 50%;
+			top: 65px;
+			transform: translate(-50%, 0);
+			z-index: 101;
+		}
+	}
+
+	&__cards {
+		width: 100%;
+		max-width: 500px;
+		height: 500px;
+		background: #eee;
+		border-radius: 50%;
+		border: 15px solid #D7BFA8;
+		position: relative;
+		overflow: hidden;
+		transition: all 5s ease-out 0s;
+		box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+		z-index: 3;
+	}
+
+	&__card {
+		height: 50%;
+		width: 274px;
+		position: absolute;
+		clip-path: polygon(100% 0, 50% 100%, 0 0);
+		transform: translateX(-50%);
+		transform-origin: bottom;
+		display: flex;
+		justify-content: center;
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: #fff;
+		left: 98px;
+	}
+	&__card:first-child {
+		background: url(../img/Harcho.jpg) center/ cover no-repeat;
+		left: 50%;
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 76px;
+			top: 10px;
+			transform: rotate(-30deg);
+			z-index: 1000;
+		}
+	}
+	&__card:nth-child(2) {
+		background: url(../img/chease_soup.jpg) center/ cover no-repeat;
+		transform: rotate(60deg);
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 76px;
+			top: 10px;
+			transform: rotate(-30deg);
+			z-index: 1000;
+		}
+	}
+	&__card:nth-child(3) {
+		background: url(../img/makaroni.jpg) center/ cover no-repeat;
+		transform: rotate(120deg);
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 76px;
+			top: 10px;
+			transform: rotate(-30deg);
+			z-index: 1000;
+		}
+	}
+	&__card:nth-child(4) {
+		background: url(../img/risoviy.jpg) center/ cover no-repeat;
+		transform: rotate(180deg);
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 76px;
+			top: 10px;
+			transform: rotate(-30deg);
+			z-index: 1000;
+		}
+	}
+	&__card:nth-child(5) {
+		background: url(../img/grechka.jpg) center/ cover no-repeat;
+		transform: rotate(240deg);
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 76px;
+			top: 10px;
+			transform: rotate(-30deg);
+			z-index: 1000;
+		}
+	}
+	&__card:last-child {
+		background: url(../img/borsh.jpg) center/ cover no-repeat;
+		transform: rotate(300deg);
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 76px;
+			top: 10px;
+			transform: rotate(-30deg);
+			z-index: 1000;
+		}
+	}
+
+
+	&__title {
+		font-size: 2rem;
+		text-shadow: 0 0 2px #000;
+		position: relative;
+		top: 30px;
+	}
+	@media (max-width:550px) {
+		&__btn {
+			font-size: 1rem;
+			width: 85px;
+			height: 85px;
+		}
+		&__arrow {
+			&::before {
+				width: 60px;
+				height: 70px;
+			}
+		}
+		&__cards {
+			width: 345px;
+			height: 345px;
+		}
+			&__card {
+		height: 50%;
+		width: 183px;
+		position: absolute;
+		clip-path: polygon(100% 0, 50% 100%, 0 0);
+		transform: translateX(-50%);
+		transform-origin: bottom;
+		display: flex;
+		justify-content: center;
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: #fff;
+		left: 67px;
+	}
+	&__card:first-child {
+
+		&::before {
+			left: 46.5px;
+			top: 0px;
+			transform: rotate(-29deg);
+		}
+	}
+	&__card:nth-child(2) {
+
+		&::before {
+			left: 46.5px;
+			top: 0px;
+			transform: rotate(-29.4deg);
+		}
+	}
+	&__card:nth-child(3) {
+
+		&::before {
+			left: 46.5px;
+			top: 0px;
+			transform: rotate(-29.4deg);
+		}
+	}
+	&__card:nth-child(4) {
+		&::before {
+			left: 46.5px;
+			top: 0px;
+			transform: rotate(-29.4deg);
+		}
+	}
+	&__card:nth-child(5) {
+		&::before {
+			left: 46.5px;
+			top: 0px;
+			transform: rotate(-29.4deg);
+		}
+	}
+	&__card:last-child {
+		&::before {
+			left: 46.5px;
+			top: 0px;
+			transform: rotate(-29.4deg);
+		}
+	}
+	&__title {
+		font-size: 1.4rem;
+		top: 20px;
+	}
+	}
+}
+
+.garnire {
+	background: #FAF3E0;
+	position: relative;
+	.element-1 {
+		&::before {
+			content: '';
+			width: 50px;
+			height: 50px;
+			background: url(../img/beer.svg) 0 0/ contain no-repeat;
+			position: absolute;
+			top: 120px;
+			right: 20px;
+			animation: rotaterev 9s linear infinite;
+		}
+		&::after {
+			content: '';
+			width: 100px;
+			height: 100px;
+			background: url(../img/burger.svg) 0 0/contain no-repeat;
+			position: absolute;
+			top: 30px;
+			left: 0;
+			animation: rotate 7s linear infinite;
+		}
+	} 
+	&::before {
+		content: '';
+		width: 100%;
+		height: 2px;
+		background: #d7bfa86e;
+		position: absolute;
+		bottom: 45px;
+		left: 0;
+	}
+	&__body {
+		grid-column: 2 / 3;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 100px 0;
+		position: relative;
+	}
+
+	&__button {
+		position: absolute;
+		z-index: 100;
+		top: 50%;
+		transform: translate(0, -50%);
+		display: flex;
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		font-size: 1.5rem;
+		background: #D7BFA8;
+		color: #5C4B3A;
+		box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+	}
+
+	&__arrow {
+		
+		
+		&::before {
+			content: '';
+			width: 70px;
+			height: 80px;
+			background: url(../img/pointer-pin-svgrepo-com.svg) 0 0/ contain no-repeat;
+			position: absolute;
+			left: 50%;
+			top: 65px;
+			transform: translate(-50%, 0);
+			z-index: 101;
+		}
+	}
+
+	&__cards {
+		width: 100%;
+		max-width: 500px;
+		height: 500px;
+		background: #eee;
+		border-radius: 50%;
+		border: 15px solid #D7BFA8;
+		position: relative;
+		overflow: hidden;
+		transition: all 5s ease-out 0s;
+		box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+		z-index: 3;
+	}
+
+	&__card {
+		height: 50%;
+		width: 200px;
+		position: absolute;
+		clip-path: polygon(100% 0, 50% 100%, 0 0);
+		transform: translateX(-50%);
+		transform-origin: bottom;
+		display: flex;
+		justify-content: center;
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: #fff;
+		left: 135px;
+	}
+	&__card:first-child {
+		background: url(../img/plov.jpg) center/ cover no-repeat;
+		left: 50%;
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 52px;
+			top: 0px;
+			transform: rotate(-22deg);
+			z-index: 1000;
+		}
+	}
+	&__card:nth-child(2) {
+		background: url(../img/verm-s-mysom.jpg) bottom/ cover no-repeat;
+		transform: rotate(45deg);
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 50px;
+			top: 0px;
+			transform: rotate(-23deg);
+			z-index: 1000;
+		}
+	}
+	&__card:nth-child(3) {
+		background: url(../img/bulgur.jpg) center/ cover no-repeat;
+		transform: rotate(90deg);
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 50px;
+			top: 0px;
+			transform: rotate(-23deg);
+			z-index: 1000;
+		}
+	}
+	&__card:nth-child(4) {
+		background: url(../img/pyre-s-kotl.jpg) bottom/ cover no-repeat;
+		transform: rotate(135deg);
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 50px;
+			top: 0px;
+			transform: rotate(-23deg);
+			z-index: 1000;
+		}
+	}
+	&__card:nth-child(5) {
+		background: url(../img/Ydon.jpg) center/ cover no-repeat;
+		transform: rotate(180deg);
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 50px;
+			top: 0px;
+			transform: rotate(-23deg);
+			z-index: 1000;
+		}
+	}
+	&__card:nth-child(6) {
+		background: url(../img/kortoha-jarenay.jpg) center/ cover no-repeat;
+		transform: rotate(225deg);
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 50px;
+			top: 0px;
+			transform: rotate(-23deg);
+			z-index: 1000;
+		}
+	}
+	&__card:nth-child(7) {
+		background: url(../img/kartoha-gril.jpg) bottom/ cover no-repeat;
+		transform: rotate(270deg);
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 50px;
+			top: 0px;
+			transform: rotate(-23deg);
+			z-index: 1000;
+		}
+	}
+	&__card:last-child {
+		background: url(../img/grecha-s-mysom.jpg) bottom/ cover no-repeat;
+		transform: rotate(315deg);
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 50px;
+			top: 0px;
+			transform: rotate(-23deg);
+			z-index: 1000;
+		}
+	}
+	&__title {
+		font-size: 1.5rem;
+		text-shadow: 0 0 2px #000;
+		position: relative;
+		top: 30px;
+		writing-mode: vertical-lr;
+	}
+	@media (max-width:550px) {
+		&__btn {
+			font-size: 1rem;
+			width: 85px;
+			height: 85px;
+		}
+		&__arrow {
+			&::before {
+				width: 60px;
+				height: 70px;
+			}
+		}
+		&__cards {
+			width: 345px;
+			height: 345px;
+		}
+			&__card {
+		height: 50%;
+		width: 132px;
+		position: absolute;
+		clip-path: polygon(100% 0, 50% 100%, 0 0);
+		transform: translateX(-50%);
+		transform-origin: bottom;
+		display: flex;
+		justify-content: center;
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: #fff;
+		left: 92px;
+	}
+		&__card:first-child {
+		left: 50%;
+		&::before {
+			left: 33px;
+			top: 0px;
+			transform: rotate(-22deg);
+		}
+	}
+	&__card:nth-child(2) {
+		transform: rotate(45deg);
+		&::before {
+			left: 33px;
+			top: 0px;
+			transform: rotate(-23deg);
+		}
+	}
+	&__card:nth-child(3) {
+		transform: rotate(90deg);
+		&::before {
+			left: 33px;
+			top: 0px;
+			transform: rotate(-23deg);
+		}
+	}
+	&__card:nth-child(4) {
+		transform: rotate(135deg);
+		&::before {
+			left: 33px;
+			top: 0px;
+			transform: rotate(-23deg);
+		}
+	}
+	&__card:nth-child(5) {
+		transform: rotate(180deg);
+		&::before {
+			left: 33px;
+			top: 0px;
+			transform: rotate(-23deg);
+		}
+	}
+	&__card:nth-child(6) {
+		transform: rotate(225deg);
+		&::before {
+			left: 33px;
+			top: 0px;
+			transform: rotate(-23deg);
+		}
+	}
+	&__card:nth-child(7) {
+		transform: rotate(270deg);
+		&::before {
+			left: 33px;
+			top: 0px;
+			transform: rotate(-23deg);
+		}
+	}
+	&__card:last-child {
+		transform: rotate(315deg);
+		&::before {
+			left: 33px;
+			top: 0px;
+			transform: rotate(-23deg);
+		}
+	}
+	&__title {
+		font-size: 1rem;
+		top: 10px;
+	}
+	}
+}
+
+.sweet {
+	background: #FAF3E0;
+	position: relative;
+	&::before {
+		content: '';
+		width: 50px;
+		height: 50px;
+		background: url(../img/tort.svg) 0 0/contain no-repeat;
+		position: absolute;
+		right: 20px;
+		top: 40px;
+		animation: tort-scale 4s linear infinite;
+	}
+	&::after {
+		content: '';
+		width: 40px;
+		height: 35px;
+		background: url(../img/candy.svg) 0 0/contain no-repeat;
+		position: absolute;
+		top: 80px;
+		left: 30px;
+		animation: candy-scale 5s linear infinite;
+	}
+	&__body {
+		grid-column: 2 / 3;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 100px 0;
+		position: relative;
+	}
+
+	&__button {
+		position: absolute;
+		z-index: 100;
+		top: 50%;
+		transform: translate(0, -50%);
+		display: flex;
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		font-size: 1.5rem;
+		background: #D7BFA8;
+		color: #5C4B3A;
+		box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+	}
+
+	&__arrow {
+
+
+		&::before {
+			content: '';
+			width: 70px;
+			height: 80px;
+			background: url(../img/pointer-pin-svgrepo-com.svg) 0 0/ contain no-repeat;
+			position: absolute;
+			left: 50%;
+			top: 65px;
+			transform: translate(-50%, 0);
+			z-index: 101;
+		}
+	}
+
+	&__cards {
+		width: 100%;
+		max-width: 500px;
+		height: 500px;
+		background: #eee;
+		border-radius: 50%;
+		border: 15px solid #D7BFA8;
+		position: relative;
+		overflow: hidden;
+		transition: all 5s ease-out 0s;
+		box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+		z-index: 3;
+	}
+
+	&__card {
+		height: 50%;
+		width: 274px;
+		position: absolute;
+		clip-path: polygon(100% 0, 50% 100%, 0 0);
+		transform: translateX(-50%);
+		transform-origin: bottom;
+		display: flex;
+		justify-content: center;
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: #fff;
+		left: 98px;
+	}
+
+	&__card:first-child {
+		background: url(../img/pirogi-jar.jpg) center/ cover no-repeat;
+		left: 50%;
+
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 76px;
+			top: 10px;
+			transform: rotate(-30deg);
+			z-index: 1000;
+		}
+	}
+
+	&__card:nth-child(2) {
+		background: url(../img/oladi.jpg) center/ cover no-repeat;
+		transform: rotate(60deg);
+
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 76px;
+			top: 10px;
+			transform: rotate(-30deg);
+			z-index: 1000;
+		}
+	}
+
+	&__card:nth-child(3) {
+		background: url(../img/blini.jpg) 0 -120px/ cover no-repeat;
+		transform: rotate(120deg);
+
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 76px;
+			top: 10px;
+			transform: rotate(-30deg);
+			z-index: 1000;
+		}
+	}
+
+	&__card:nth-child(4) {
+		background: url(../img/vafli.jpg) center/ cover no-repeat;
+		transform: rotate(180deg);
+
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 76px;
+			top: 10px;
+			transform: rotate(-30deg);
+			z-index: 1000;
+		}
+	}
+
+	&__card:nth-child(5) {
+		background: url(../img/keksi.jpg) center/ cover no-repeat;
+		transform: rotate(240deg);
+
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 76px;
+			top: 10px;
+			transform: rotate(-30deg);
+			z-index: 1000;
+		}
+	}
+
+	&__card:last-child {
+		background: url(../img/medovik.jpg) center/ cover no-repeat;
+		transform: rotate(300deg);
+
+		&::before {
+			content: '';
+			width: 4px;
+			height: 102%;
+			background: #D7BFA8;
+			position: absolute;
+			left: 76px;
+			top: 10px;
+			transform: rotate(-30deg);
+			z-index: 1000;
+		}
+	}
+
+
+	&__title {
+		font-size: 2rem;
+		text-shadow: 0 0 2px #000;
+		position: relative;
+		top: 30px;
+	}
+
+	@media (max-width:550px) {
+		&__btn {
+			font-size: 1rem;
+			width: 85px;
+			height: 85px;
+		}
+
+		&__arrow {
+			&::before {
+				width: 60px;
+				height: 70px;
+			}
+		}
+
+		&__cards {
+			width: 345px;
+			height: 345px;
+		}
+
+		&__card {
+			height: 50%;
+			width: 183px;
+			position: absolute;
+			clip-path: polygon(100% 0, 50% 100%, 0 0);
+			transform: translateX(-50%);
+			transform-origin: bottom;
+			display: flex;
+			justify-content: center;
+			font-size: 1.5rem;
+			font-weight: 700;
+			color: #fff;
+			left: 67px;
+		}
+
+		&__card:first-child {
+
+			&::before {
+				left: 46.5px;
+				top: 0px;
+				transform: rotate(-29deg);
+			}
+		}
+
+		&__card:nth-child(2) {
+
+			&::before {
+				left: 46.5px;
+				top: 0px;
+				transform: rotate(-29.4deg);
+			}
+		}
+
+		&__card:nth-child(3) {
+
+			&::before {
+				left: 46.5px;
+				top: 0px;
+				transform: rotate(-29.4deg);
+			}
+		}
+
+		&__card:nth-child(4) {
+			&::before {
+				left: 46.5px;
+				top: 0px;
+				transform: rotate(-29.4deg);
+			}
+		}
+
+		&__card:nth-child(5) {
+			&::before {
+				left: 46.5px;
+				top: 0px;
+				transform: rotate(-29.4deg);
+			}
+		}
+
+		&__card:last-child {
+			&::before {
+				left: 46.5px;
+				top: 0px;
+				transform: rotate(-29.4deg);
+			}
+		}
+
+		&__title {
+			font-size: 1.4rem;
+			top: 20px;
+		}
+	}
+}
+/*    Рулетка
+.soup {
+	background: #FAF3E0;
+	padding: 100px;
+
+	&__body {
+		grid-column: 2 / 3;
+		background: #F0E5CF;
+		padding: 50px 0;
+		border-radius: 15px;
+		box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+		display: grid;
+		grid-template: auto 1fr auto / 1fr;
+		row-gap: 50px;
+	}
+
+	&__info {
+		display: grid;
+		justify-content: center;
+	}
+
+	&__title-text {
+		font-size: 3rem;
+		text-transform: uppercase;
+		font-weight: 900;
+		color: #6E4E3A;
+	}
+
+	&__block {
+		width: 100%;
+		max-width: 900px;
+		height: 250px;
+		overflow: hidden;
+		position: relative;
+		margin: 0 auto;
+	}
+
+	&__cards {
+		display: inline-flex;
+		position: absolute;
+		column-gap: 5px;
+
+
+	}
+
+	&__card {
+		width: 250px;
+		height: 250px;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: 100%;
+			border-radius: 15px;
+
+		}
+	}
+
+	&__title {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		color: #F5F5F5;
+		font-size: 2rem;
+	}
+
+	&__button {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__btn {
+		width: 100%;
+		max-width: 250px;
+		height: 70px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 2.5rem;
+		text-transform: uppercase;
+		font-weight: 700;
+		border-radius: 15px;
+		background: #D7BFA8;
+		color: #5C4B3A;
+		position: relative;
+		top: 0;
+		box-shadow: 0 6px 1px rgba(0, 0, 0, 0.3);
+		transition: all 0.15s linear 0s;
+
+		&:hover {
+			top: 2px;
+			box-shadow: 0 4px 1px rgba(0, 0, 0, 0.3);
+		}
+	}
+}
+*/
+
+@keyframes bread-soup {
+	0% {
+		transform: rotate(0deg);
+	}
+	33% {
+		transform: rotate(-15deg) scale(1.3);
+	}
+	66% {
+		transform: rotate(15deg) scale(1.3);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes arbuz-soup {
+	0% {
+		transform: rotate(215deg);
+	}
+	33% {
+		transform: rotate(230deg);
+	}
+	66% {
+		transform: rotate(200deg);
+	}
+	100% {
+		transform: rotate(215deg);
+	}
+}
+
+@keyframes rotaterev {
+	0% {
+		transform: rotate(0deg);
+	}
+	33% {
+		transform: rotate(20deg);
+	}
+	66% {
+		transform: rotate(-20deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	33% {
+		transform: rotate(-10deg);
+	}
+	66% {
+		transform: rotate(10deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes tort-scale {
+	0% {transform: rotate(0deg) scale(1);}
+	33% {
+		transform: rotate(5deg) scale(1.4);
+	}
+	66% {transform: rotate(-5deg) scale(1.2);}
+	100% {transform: rotate(0deg) scale(1);}
+}
+
+@keyframes candy-scale {
+	0% {
+			transform: rotate(0deg) scale(1);
+		}
+	33% {
+			transform: rotate(-10deg) scale(1.3);
+		}
+	66% {
+			transform: rotate(10deg) scale(1.3);
+		}
+	100% {
+			transform: rotate(0deg) scale(1);
+		}
+}
